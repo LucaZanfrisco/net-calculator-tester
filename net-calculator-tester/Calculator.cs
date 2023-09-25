@@ -23,5 +23,23 @@ namespace net_calculator_tester
 
             return num1 - num2;
         }
+
+        public float Divide(float num1, float num2)
+        {
+            if(num2 <= 0)
+            {
+                throw new Exception("Il divisore non puo essere uguale o minore di zero");
+            }
+            return num1 / num2;
+        }
+
+        public float Multiply(float num1, float num2)
+        {
+            if(num1 == 0 ||  num2 == 0)
+            {
+                throw new Exception("Uno dei due valori è uguale a zero");
+            }
+            return num1 * num2;
+        }
     }
 }
