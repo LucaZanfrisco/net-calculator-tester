@@ -29,6 +29,13 @@ namespace TestCalculator
             Assert.AreEqual(result, (num1 + num2));
         }
 
+        [Test(Description ="Test che controlla se la somma non generi eccezioni")]
+        [TestCase(-23.89f, 45.12f)]
+        public void Test_AddNotThrowException_Success(float num1, float num2)
+        {
+            Assert.DoesNotThrow(() => { newCalculator.Add(num1, num2); });
+        }
+
         [Test(Description ="Test che controlla se il risultato della sottrazione sia un numero positivo")]
         [TestCase(23.89f, 45.12f)]
         public void Test_SubstractResultMoreThenZero_Success(float num1,float num2)
