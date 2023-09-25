@@ -19,9 +19,15 @@ namespace TestCalculator
 
             Assert.True(result > 0,$"Test per la somma superato: {result}");
         }
-        
 
+        [Test]
+        [TestCase(3.5f, 6.9f)]
+        public void Test_AddReturnCorretValue_Succes(float num1, float num2)
+        {
+            float result = newCalculator.Add(num1, num2);
 
+            Assert.AreEqual(result, (num1 + num2));
+        }
 
     }
 }
