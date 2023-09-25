@@ -29,5 +29,14 @@ namespace TestCalculator
             Assert.AreEqual(result, (num1 + num2));
         }
 
+        [Test]
+        [TestCase(23.89f, 45.12f)]
+        public void Test_SubstractMoreThenZero_Success(float num1,float num2)
+        {
+            float result = newCalculator.Substract(num1, num2);
+
+            Assert.True(result > 0, "Il risultato è maggiore di zero");
+        }
+
     }
 }
